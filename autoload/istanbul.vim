@@ -1,5 +1,10 @@
 " to load json generate from : istabul report
 
+if !has('python')
+    echohl WarningMsg|echomsg "python interface to vim not found."
+    finish
+endif
+
 if !exists('g:coverage_json_path')
     let json_path=getcwd().'/coverage/coverage.json'
     if filereadable(json_path)
