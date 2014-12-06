@@ -10,7 +10,8 @@ def load_json_content(file_dir):
     with open(coverage_path) as json_file:
         return json.loads(json_file.read())
 
-def load_json():
+
+def sign_covered_lines():
     file_path = vim.eval("escape(expand('%:p'), '\')")
     bufname = vim.eval("escape(bufname('%'), '\')")
     current_dir = vim.eval('getcwd()')

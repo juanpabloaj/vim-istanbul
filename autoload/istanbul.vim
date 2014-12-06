@@ -30,7 +30,7 @@ fun! s:istanbulShow() "{{{
     call s:SetHighlight()
     " if report not exists : istabul report
     exe 'pyfile ' . s:plugin_path . '/istanbul.py'
-    python load_json()
+    python sign_covered_lines()
 endf "}}}
 
 fun! istanbul#IstanbulShow() "{{{
