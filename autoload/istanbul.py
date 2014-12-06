@@ -26,11 +26,14 @@ def load_json():
                 if field['s'][i] < 1:
                     sign_place = "sign place {} line={} name=uncovered buffer={}"\
                         .format(start, start, buffernr)
-                    vim.command(sign_place)
+                else:
+                    sign_place = "sign place {} line={} name=covered buffer={}"\
+                        .format(start, start, buffernr)
+                vim.command(sign_place)
 
             fn_map = field['fnMap']
             for i,fn in fn_map.items():
-                start, end = [ fn['loc'][s]['line'] for s in ['start', 'end']]
+                line = fn['line']
                 sign_place = "sign place {} line={} name=fstatno buffer={}"\
-                    .format(i, start, buffernr)
+                    .format(i, line, buffernr)
                 vim.command(sign_place)
