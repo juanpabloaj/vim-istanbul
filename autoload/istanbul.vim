@@ -1,5 +1,15 @@
 " to load json generate from : istabul report
 
+if !exists('g:coverage_json_path')
+    let json_path=getcwd().'/coverage/coverage.json'
+    if filereadable(json_path)
+        let g:coverage_json_path=json_path
+    else
+        echohl WarningMsg|echomsg "coverage.json file not found."
+        finish
+    end
+end
+
 let s:plugin_path = escape(expand('<sfile>:p:h'), '\')
 
 function! s:ClearSigns() abort
