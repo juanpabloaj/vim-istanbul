@@ -21,4 +21,4 @@ Hide sign
 
     :IstanbulHide
 
-Inspired by [](https://github.com/alfredodeza/coveragepy.vim)
+Inspired by [coverage.py](https://github.com/alfredodeza/coveragepy.vim)
