@@ -4,7 +4,7 @@ Show functions and statements not covered. Get information from `coverage.json` 
 
     istanbul report
 
-### showing covered/uncovered lines
+### Showing covered/uncovered lines
 
 ![ss](http://cl.ly/YqpR/2__server_js______src_getscreenshots__-_VIM__vim_.png)
 
