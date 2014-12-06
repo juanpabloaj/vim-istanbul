@@ -18,9 +18,11 @@ endfunction
 
 function! s:SetHighlight()
     hi SignColumn guifg=#004400 guibg=green ctermfg=40 ctermbg=40
-    hi uncovered guifg=#ff2222 guibg=red ctermfg=1 ctermbg=1
+    hi uncovered guifg=#fc8c84 guibg=#fc8c84 ctermfg=196 ctermbg=196
+    hi fstatno guifg=#ffc520 guibg=#ffc520  ctermfg=208 ctermbg=208
     hi covered guifg=#004400 guibg=green ctermfg=40 ctermbg=40
     sign define uncovered text=XX texthl=uncovered
+    sign define fstatno text=XX texthl=fstatno
     sign define covered text=XX texthl=covered
 endfunction
 

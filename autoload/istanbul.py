@@ -19,9 +19,17 @@ def load_json():
     json_content = load_json_content(current_dir)
     for path, field in json_content.items():
         if path == file_path:
+
+            statementMap = field['statementMap']
+            for i, st in statementMap.items():
+                start, end = [ st[s]['line'] for s in ['start', 'end']]
+                sign_place = "sign place {} line={} name=uncovered buffer={}"\
+                    .format(i, start, buffernr)
+                vim.command(sign_place)
+
             fn_map = field['fnMap']
             for i,fn in fn_map.items():
                 start, end = [ fn['loc'][s]['line'] for s in ['start', 'end']]
-                sign_place = "sign place {} line={} name=uncovered buffer={}"\
+                sign_place = "sign place {} line={} name=fstatno buffer={}"\
                     .format(i, start, buffernr)
                 vim.command(sign_place)
