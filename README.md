@@ -8,6 +8,12 @@ Show functions and statements not covered. Get information from `coverage.json` 
 
 ![ss](http://cl.ly/YqpR/2__server_js______src_getscreenshots__-_VIM__vim_.png)
 
+## Requirements
+
+* Vim 7.3+
+* Python support for Vim
+* Python 2.6+
+
 ## Install
 
 If you use [pathogen](https://github.com/tpope/vim-pathogen), clone this repo to bundle directory
