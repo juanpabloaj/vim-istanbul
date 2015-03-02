@@ -22,6 +22,7 @@ function! s:ClearSigns() abort
 endfunction
 
 function! s:SetHighlight()
+    hi clear SignColumn
     hi link SignColumn Normal
     hi uncovered guifg=#fc8c84 guibg=#fc8c84 ctermfg=196 ctermbg=196
     hi fstatno guifg=#ffc520 guibg=#ffc520  ctermfg=208 ctermbg=208
