@@ -35,6 +35,7 @@ endfunction
 fun! s:istanbulShow() "{{{
     call s:SetHighlight()
     " if report not exists : istabul report
+    exe 'py g_coverage_json_path = "' . g:coverage_json_path . '"'
     exe 'pyfile ' . s:plugin_path . '/istanbul.py'
     python sign_covered_lines()
 endf "}}}

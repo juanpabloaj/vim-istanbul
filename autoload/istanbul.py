@@ -6,7 +6,7 @@ import os
 
 
 def load_json_content(file_dir):
-    coverage_path = os.path.join(file_dir, 'coverage/coverage.json')
+    coverage_path = os.path.join(file_dir, g_coverage_json_path)
     with open(coverage_path) as json_file:
         return json.loads(json_file.read())
 
