@@ -8,6 +8,8 @@ Show functions and statements not covered. Get information from `coverage.json` 
 
 ![ss](http://cl.ly/YqpR/2__server_js______src_getscreenshots__-_VIM__vim_.png)
 
+![gif](http://i.imgur.com/ob67l3G.gif)
+
 ## Requirements
 
 * Vim 7.3+
