@@ -32,3 +32,8 @@ Hide sign
     :IstanbulHide
 
 Inspired by [coverage.py](https://github.com/alfredodeza/coveragepy.vim)
+
+## Contributors
+
+* [JuanPablo AJ](https://github.com/juanpabloaj)
+* [Daniel Sabelnikov](https://github.com/dragn)
