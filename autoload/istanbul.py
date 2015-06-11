@@ -10,11 +10,8 @@ def load_json_content(file_dir):
     with open(coverage_path) as json_file:
         return json.loads(json_file.read())
 
-def check_file(current_dir, file_path, path):
-    if path[0] == '/':
-        return path == file_path
-    else:
-        return (current_dir + '/' + path) == file_path
+def check_file(file_path, path):
+    return os.path.abspath(path) == file_path
 
 def sign_covered_lines():
     file_path = vim.eval("escape(expand('%:p'), '\')")
@@ -24,8 +21,7 @@ def sign_covered_lines():
 
     json_content = load_json_content(current_dir)
     for path, field in json_content.items():
-        if check_file(current_dir, file_path, path):
-
+        if check_file(file_path, path):
             statementMap = field['statementMap']
             for i, st in statementMap.items():
                 start, end = [ st[s]['line'] for s in ['start', 'end']]
