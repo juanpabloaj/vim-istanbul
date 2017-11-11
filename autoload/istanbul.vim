@@ -10,10 +10,16 @@ if !exists('g:coverage_json_path')
     if filereadable(json_path)
         let g:coverage_json_path=json_path
     else
-        echohl WarningMsg|echomsg "coverage.json file not found."
-        finish
+        let json_path=getcwd().'/coverage/coverage-final.json'
+        if filereadable(json_path)
+            let g:coverage_json_path=json_path
+        else
+            echohl WarningMsg|echomsg "coverage.json file not found."
+            finish
+        end
     end
 end
+
 
 let s:plugin_path = escape(expand('<sfile>:p:h'), '\')
 
